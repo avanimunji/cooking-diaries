@@ -1,0 +1,1 @@
+export { DayPlanner as default } from '../components/FoodWeekPlanner.jsx'

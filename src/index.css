@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #000000;
+  --color-darkbrown: #65482E;
+  --color-cream: #FFF6EB;
+  --color-blue: #11659C;
+  --color-orange: #FF860D;
+  
+  --font-family-gasoek: 'Gasoek One', sans-serif;
+  --font-family-fjalla: 'Fjalla One', sans-serif;
+  
+  --radius-xl: 24px;
+}
+
+@layer base {
+  .font-gasoek {
+    font-family: var(--font-family-gasoek);
+  }
+  
+  .font-fjalla {
+    font-family: var(--font-family-fjalla);
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #FFF6EB;
+    border-radius: 12px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #65482E;
+    border-radius: 12px;
+    border: 2px solid #FFF6EB;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #65482E;
+  }
+
+  /* For Firefox */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #65482E #FFF6EB;
+  }
+}

@@ -1,0 +1,1 @@
+export { FoodWeekView as default } from '../components/FoodWeekPlanner.jsx'
