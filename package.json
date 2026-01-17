@@ -1,0 +1,10 @@
+{
+    "name": "cooking-diaries-root",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "build-frontend": "cd frontend && npm install && npm run build",
+      "start": "node server/server.js"
+    }
+  }
+  
