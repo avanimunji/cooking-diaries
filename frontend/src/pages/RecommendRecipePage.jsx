@@ -25,7 +25,7 @@ export default function RecommendRecipePage() {
     setError(null);
     
     try {
-      const response = await fetch("http://localhost:3001/api/recommend-recipe", {
+      const response = await fetch("/api/recommend-recipe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

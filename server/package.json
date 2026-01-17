@@ -4,6 +4,7 @@
     "type": "module",
     "main": "server.js",
     "scripts": {
+        "build-frontend": "cd frontend && npm install && npm run build",
         "start": "node server.js"
     },
     "dependencies": {

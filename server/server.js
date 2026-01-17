@@ -1,11 +1,19 @@
-// server.js
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
 
 // Initialize Gemini client
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -234,6 +242,15 @@ Return ONLY valid JSON (no markdown, no backticks):
   }
 });
 
+// Serve frontend
+const frontendPath = join(__dirname, '../frontend/dist');
+app.use(express.static(frontendPath));
+
+// Must come after API routes
+app.get('*', (req, res) => {
+  res.sendFile(join(frontendPath, 'index.html'));
+});
+
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
