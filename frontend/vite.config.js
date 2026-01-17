@@ -20,7 +20,7 @@ export default defineConfig({
   },
 
   build: {
-    outDir: path.resolve(__dirname, "../server/dist"),
+    outDir: 'dist',  // Changed this line
     emptyOutDir: true
   }
   
