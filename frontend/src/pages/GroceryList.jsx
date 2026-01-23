@@ -495,7 +495,7 @@ export default function GroceryList() {
           )}
 
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/next')}
             className="mt-8 bg-darkbrown text-cream font-fjalla text-2xl px-8 py-4 rounded-xl hover:bg-blue transition-colors uppercase"
           >
             Back to Home
