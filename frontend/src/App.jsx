@@ -4,13 +4,14 @@ import { AnimatePresence } from 'framer-motion'
 import LandingPage from './pages/LandingPage.jsx'
 import Home from './pages/Home.jsx'
 import TriedRecipes from './pages/TriedRecipes.jsx'
-import RecipeDetailPage from './pages/RecipeDetailPage'
-import AddRecipePage from './pages/AddRecipePage'
-import RecommendRecipePage from './pages/RecommendRecipePage'
+import RecipeDetailPage from './pages/RecipeDetailPage.jsx'
+import AddRecipePage from './pages/AddRecipePage.jsx'
+import RecommendRecipePage from './pages/RecommendRecipePage.jsx'
 import PageTransition from './components/PageTransition.jsx'
 import PreferencesPage from './pages/PreferencesPage.jsx'
-import FoodWeekView from './pages/FoodWeekView'
-import DayPlanner from './pages/DayPlanner'
+import FoodWeekView from './pages/FoodWeekView.jsx'
+import DayPlanner from './pages/DayPlanner.jsx'
+import GroceryList from './pages/GroceryList.jsx'
 
 export default function App() {
   const location = useLocation()
@@ -65,6 +66,11 @@ export default function App() {
           <Route path="/food-week/day" element={
             <PageTransition direction={direction}>
               <DayPlanner />
+            </PageTransition>
+          } />
+          <Route path="/grocery-list" element={
+            <PageTransition direction={direction}>
+              <GroceryList />
             </PageTransition>
           } />
           
