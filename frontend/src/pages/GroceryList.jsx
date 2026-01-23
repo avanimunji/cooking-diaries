@@ -56,6 +56,15 @@ const saveGroceryList = async (checkedItems) => {
 }
 
 // ============= INGREDIENT PARSING =============
+// Helper to parse fractions
+const parseFraction = (str) => {
+  if (str.includes('/')) {
+    const [numerator, denominator] = str.split('/').map(Number)
+    return numerator / denominator
+  }
+  return parseFloat(str)
+}
+
 const parseIngredient = (ingredientText) => {
   // Extract quantity and unit from ingredient string
   const pattern = /^(\d+(?:\/\d+)?(?:\.\d+)?)\s*(cup|cups|tablespoon|tablespoons|tbsp|teaspoon|tsp|oz|ounce|ounces|pound|pounds|lb|lbs|kg|g|ml|l)?s?\s+(.+)$/i
@@ -63,13 +72,9 @@ const parseIngredient = (ingredientText) => {
   
   if (match) {
     const [_, quantity, unit, ingredient] = match
-    // Handle fractions
-    let numQty = quantity.includes('/') 
-      ? eval(quantity) 
-      : parseFloat(quantity)
     
     return {
-      quantity: numQty,
+      quantity: parseFraction(quantity),
       unit: unit ? unit.toLowerCase() : '',
       ingredient: ingredient.toLowerCase().trim(),
       original: ingredientText

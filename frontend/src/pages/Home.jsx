@@ -93,7 +93,11 @@ export default function Home() {
 
         {/* Bottom Right - Grocery List */}
         <div 
-          onClick={() => navigate('/grocery-list')}
+          onClick={(e) => {
+            e.stopPropagation()
+            console.log('Grocery list clicked!')
+            navigate('/grocery-list')
+          }}
           className="bg-orange rounded-xl p-8 h-64 flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
         >
             {/* Illustration - bottom left */}
