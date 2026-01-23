@@ -389,19 +389,22 @@ export default function GroceryList() {
             Grocery List
           </h1>
           
-          <div className="flex justify-between items-center mb-6 flex-wrap gap-3">
-            <p className="text-lg font-fjalla text-darkbrown">
-              {checkedCount} of {totalCount} items checked
-            </p>
-            
-            <div className="flex gap-3 flex-wrap">
+          {/* Controls Section */}
+          <div className="mb-6 space-y-4">
+            <div className="flex justify-between items-center">
+              <p className="text-lg font-fjalla text-darkbrown">
+                {checkedCount} of {totalCount} items checked
+              </p>
+              
               <button
                 onClick={() => setShowPantryModal(true)}
-                className="bg-darkbrown text-cream font-fjalla px-6 py-2 rounded-lg hover:bg-blue transition-colors uppercase"
+                className="bg-darkbrown text-cream font-fjalla px-6 py-3 rounded-lg hover:bg-blue transition-colors uppercase text-lg"
               >
                 ⚙️ Pantry Staples
               </button>
+            </div>
 
+            <div className="flex gap-3">
               <button
                 onClick={() => setGroupByCategory(!groupByCategory)}
                 className="bg-blue text-cream font-fjalla px-6 py-2 rounded-lg hover:bg-darkbrown transition-colors uppercase"
