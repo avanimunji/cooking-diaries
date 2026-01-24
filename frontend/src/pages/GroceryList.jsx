@@ -190,7 +190,7 @@ const combineIngredients = (ingredients) => {
 // ============= PANTRY STAPLES MODAL =============
 function PantryStaplesModal({ isOpen, onClose, pantryStaples, setPantryStaples, onSave }) {
   const [staples, setStaples] = useState(pantryStaples)
-  const [newItem, setNewItem] = useState('')
+  const [hoveredStaple, setHoveredStaple] = useState(null)
 
   useEffect(() => {
     setStaples(pantryStaples)
