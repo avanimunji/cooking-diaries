@@ -257,12 +257,12 @@ function PantryStaplesModal({ isOpen, onClose, pantryStaples, setPantryStaples, 
             {staples.sort().map((staple) => (
               <div
                 key={staple}
-                className="bg-orange bg-opacity-20 rounded-lg p-3 flex justify-between items-center group hover:bg-opacity-30 transition-colors"
+                className="bg-orange bg-opacity-20 rounded-lg p-3 flex justify-between items-center group hover:bg-opacity-30 transition-colors cursor-pointer"
               >
                 <span className="font-fjalla text-darkbrown uppercase">{staple}</span>
                 <button
                   onClick={() => removeStaple(staple)}
-                  className="text-orange hover:text-blue font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="text-orange hover:text-blue font-bold text-xl group-hover:opacity-100 opacity-0 transition-opacity"
                 >
                   ×
                 </button>
@@ -400,7 +400,7 @@ export default function GroceryList() {
                 onClick={() => setShowPantryModal(true)}
                 className="bg-darkbrown text-cream font-fjalla px-6 py-3 rounded-lg hover:bg-blue transition-colors uppercase text-lg"
               >
-                ⚙️ Pantry Staples
+                ⚙︎ Pantry Staples
               </button>
             </div>
 
