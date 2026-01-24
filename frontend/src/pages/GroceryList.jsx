@@ -400,7 +400,7 @@ export default function GroceryList() {
                 onClick={() => setShowPantryModal(true)}
                 className="bg-darkbrown text-cream font-fjalla px-6 py-3 rounded-lg hover:bg-blue transition-colors uppercase text-lg"
               >
-                ⚙︎ Pantry Staples
+                ⚙️ Pantry Staples
               </button>
             </div>
 
