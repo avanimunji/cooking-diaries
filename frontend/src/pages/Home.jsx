@@ -21,12 +21,6 @@ export default function Home() {
           onClick={() => navigate('/nextToTriedRecipes')}
           className="bg-orange rounded-xl p-8 flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
         >
-            {/* Illustration - bottom left */}
-            <img 
-                src={truentried}
-                alt="" 
-                className="absolute bottom-86 left-16 w-60 h-60 object-contain"
-            />
 
           <div className="text-center relative z-10">
             <h2 className="text-4xl font-fjalla text-cream uppercase">
@@ -77,12 +71,6 @@ export default function Home() {
           onClick={() => navigate('/recommend-recipe')}
           className="bg-orange rounded-xl p-8 h-64 flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
         >
-            {/* Illustration - bottom left */}
-            <img 
-                src={addrec} 
-                alt="" 
-                className="absolute bottom-20 right-190 w-63 h-41 object-contain"
-            />
 
           <div className="text-center relative z-10">
             <h2 className="text-4xl font-fjalla text-cream uppercase">
@@ -100,12 +88,6 @@ export default function Home() {
           }}
           className="bg-orange rounded-xl p-8 h-64 flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
         >
-            {/* Illustration - bottom left */}
-            <img 
-                src={groclist} 
-                alt="" 
-                className="absolute bottom-5 left-228 w-90 h-50 object-contain"
-            />
 
           <div className="text-center relative z-10">
             <h2 className="text-4xl font-fjalla text-cream uppercase">
